@@ -16,7 +16,7 @@ http
   })
 
   .listen(8089, function() {
-    console.log("Node server is running...on port ", this.address().port); 
+    console.log("Node server is running on port ", this.address().port); 
 
   });
 
