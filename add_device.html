@@ -1,10 +1,31 @@
 <html>
   <head>
-    <title>xxx</title>
+    <title>SmartHome</title>
     
   </head>
   <body>
-    <h1>SmartHome</h1>
+    <h1>Add device</h1>
+    <form>
+      <label>Device name:</label>
+      <input type="text"></input>
+
+      <label>Device type:</label>
+      <select id="devices" name="devices">
+        <option value="fan">Ceiling fan</option>
+        <option value="heater">Heater</option>
+        <option value="blinds">Blinds</option>
+        <option value="light">Light</option>
+        <option value="alarm">Alarm system</option>
+        <option value="tv">TV</option>
+        <option value="sound">Sound system</option>
+        <option value="fridge">Fridge</option>
+        <option value="oven">Oven</option>
+        <option value="coffee">Coffee machine</option>
+      </select>  
+
+      <label>On/Off:</label>
+      <input type="radio">On</input>
+    </form>
     
   </body>
 </html>
