@@ -1,0 +1,19 @@
+body{
+    width: 50%;
+    margin: 50px auto;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+table {
+    margin: 50px auto;
+}
+
+table, th, td {
+    border-collapse: collapse ;
+    border: 1px solid #000;
+}
+
+th, td{
+    padding: 10px;
+}
