@@ -1,5 +1,8 @@
 // Device table functions to populate the table
 document.addEventListener('DOMContentLoaded', function(){
+  fetch('http://localhost:8089/getAll')
+  .then(response => response.json())
+  .then(data => console.log(data));
   loadHTMLTable([]);
 });
 function loadHTMLTable(data){

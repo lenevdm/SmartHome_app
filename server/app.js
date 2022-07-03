@@ -3,21 +3,35 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const dotenv = require('dotenv');
-const port = 8089;
+const { response } = require('express');
+dotenv.config();
 
-var http = require("http");
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
+//Routes
+//create
+app.post('/insert', (req, res) => {
+
+});
+
+//read
+app.get('/getAll', (request, response) => {
+    response.json({
+        success: true
+    });
+});
+
+//update
+// app.post('/insert', (req, res) => {
+    
+// });
+
+//delete
+// app.post('/insert', (req, res) => {
+    
+// });
 
 
-
-http
-  .createServer(function(req, res) {
-    res.writeHead(200, { "Content-Type": "text/plain" });
-    res.write("Welcome to the mid-term application! \n\n");
-    res.write("This application must run on PORT 8089");
-    res.end();
-  })
-
-  .listen(8089, function() {
-    console.log("Node server is running on port ", this.address().port); 
-
-  });
+app.listen(process.env.PORT, () => console.log('App is running.'));
