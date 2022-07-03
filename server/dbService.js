@@ -3,7 +3,7 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 // Connect to the database ( the details are in .env file)
-const conneciton = mysql.createConnection({
+const connection = mysql.createConnection({
     host: process.env.HOST,
     user: process.env.USER,
     password: process.env.PASSWORD,
@@ -12,12 +12,12 @@ const conneciton = mysql.createConnection({
 });
 
 // Log an error if the connection fails
-conneciton.connect((err) => {
+connection.connect((err) => {
     if(err){
         console.log(err.message);
     }
-    console.log('db ' + conneciton.state);
+    console.log('db ' + connection.state);
 })
 
 // Export the module so app.js can use it.
-module.export = dbService;
+module.exports = dbService;
