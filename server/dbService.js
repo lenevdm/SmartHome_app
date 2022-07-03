@@ -20,4 +20,4 @@ conneciton.connect((err) => {
 })
 
 // Export the module so app.js can use it.
-module.exports = DbService;
+module.export = dbService;
